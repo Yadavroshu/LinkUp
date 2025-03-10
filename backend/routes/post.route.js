@@ -1,7 +1,5 @@
 import express from "express";
 import { protectRoute } from "../middleware/protectRoute.js";
-// import { createPost } from "../controllers/post.controller.js";
-// import { deletePost } from "../controllers/post.controller.js";
 
  import {
 	commentOnPost,
