@@ -76,12 +76,12 @@ const Post = ({ post }) => {
 			//instead, update the cache directy for that post
 
 			queryClient.setQueryData(["posts"], (oldData) => {
-				return oldData.map((p )=> {
+				return oldData.map((p)=> {
 					if(p._id === post._id ){
-						return {...p,likes:updatedLikes}
+						return {...p, likes:updatedLikes}
 					}
 					return p;
-				})
+				});
 			})
 		},
 		onError:(error) => {
@@ -121,11 +121,6 @@ const Post = ({ post }) => {
 		toast.error(error.message);
 	}
    })
-
-
-	
-
-	
 
 	const handleDeletePost = () => {
 		deletePost();
